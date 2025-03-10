@@ -86,7 +86,7 @@
         <!-- add a image here-->
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
-                <img src="img/teaser.png" alt="teaser" width="100%">
+                <img src="img/teaser.png" alt="teaser" width="60%">
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
         <h2>Approach</h2>
         <hr>
         <p>
-            <b>Overall framework of our approach.</b> We construct a hierarchical 3D scene graph as well as an occupancy map online. At each step, we divide the scene graph into several subgraphs, each of which is prompted to LLM with a hierarchical chain-of-thought for structural understanding of the scene context. We interpolate the probability score of each subgraph to the frontiers and select the frontier with highest score for exploration. This decision is also explainable by summarizing the reasoning process of the LLM. With the scene graph representation, we further design a re-perception mechanism, which helps the agent give up false positive goal object by continuous credibility judgement.
+            <b>Overall framework of our approach.</b> UniGoal proposes a unified zero-shot framework for goal-oriented navigation (object, image, text goals) using graph-based scene and goal representations. It performs graph matching to guide multi-stage exploration: iterative subgraph search (zero match), coordinate projection (partial match), and scene correction (full match), with a blacklist mechanism to avoid redundant exploration. Achieves SOTA on MultiWOZ, SGD, and navigation benchmarks with a single model.
         </p>
         <!-- add a image here-->
         <div class="row align-items-center">
@@ -110,7 +110,7 @@
         <h2>Experiments</h2>
         <hr>
         <p>
-            We evaluate our method on MP3D, HM3D and RoboTHOR.
+            We evaluate our method on Object-goal navigation (ON), Instance-Image-goal navigation (IIN) and Text-goal navigation (TN).
         </p>
         <!-- add a image here-->
         <div class="row align-items-center">
@@ -119,17 +119,17 @@
             </div>
         </div>
         <p>
-            <b>Object-goal navigation results</b> on MP3D, HM3D and RoboTHOR. We compare the Success Rate (SR) and success rate weighted by
+            <b>Navigation results</b> on ON, IIN and TN. We compare the Success Rate (SR) and success rate weighted by
 path length (SPL) of state-of-the-art methods in different settings.
         </p>
         <!-- add a image here-->
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
-                <img src="img/exp2.png" alt="exp2" width="70%">
+                <img src="img/exp2.png" alt="exp2" width="85%">
             </div>
         </div>
         <p>
-            <b>Left:</b> Per category Success Rate on MP3D. <b>Right:</b> Time cost of connecting n edges for online 3D scene graph construction. 
+            <b>Visualization of our method.</b> 
         </p>
 
     <div class="section">
