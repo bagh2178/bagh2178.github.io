@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AllDayNav: Lifelong Navigation via Real-World Reinforcement Learning">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AllDayNav: Lifelong Navigation via Real-World Reinforcement Learning</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bulma.min.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="slick-theme.css">
+    <link rel="stylesheet" href="fontawesome.all.min.css">
+    <link rel="stylesheet" href="academicons.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="jquery.min.js"></script>
+    <script defer src="fontawesome.all.min.js"></script>
+    <script src="slick.min.js"></script>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-2 publication-title">
+                            AllDayNav: Lifelong Navigation via Real-World Reinforcement Learning
+                        </h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://bagh2178.github.io/">Hang Yin</a><sup>1,2,</sup>*
+                            </span> &nbsp;
+                            <span class="author-block">
+                                Yinan Liang<sup>1,2,</sup>*
+                            </span> &nbsp;
+                            <span class="author-block">
+                                <a href="https://jzhzhang.github.io/">Jiazhao Zhang</a><sup>2,3,</sup>*
+                            </span> &nbsp;
+
+                            <br>
+                            <span class="author-block">
+                                <a href="https://github.com/2003jiahang">Jiahang Liu</a><sup>2</sup>
+                            </span> &nbsp;
+                            <span class="author-block">
+                                <a href="https://github.com/lpercc">Minghan Li</a><sup>2</sup>
+                            </span> &nbsp;
+                            <span class="author-block">
+                                <a href="https://hughw19.github.io/">He Wang</a><sup>2,3,4</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <sup>1</sup>Tsinghua University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <sup>2</sup>GalBot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <sup>3</sup>Peking University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <sup>4</sup>BAAI
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            *Joint First Author
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/XXXX.XXXXX"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>ArXiv (Coming Soon)</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=XOek5BsLf0Q"
+                                        class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span>Video</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaser Section -->
+    <section class="hero teaser">
+        <div class="container is-max-desktop is-centered has-text-justified is-size-5">
+            <div class="hero-body">
+                <img src="img/teaser.jpg" alt="teaser Image" width="100%">
+                <p>
+                    <em class="highlight-center">AllDayNav achieves near-100% success rates in lifelong navigation through memory-driven reinforcement learning</em>.
+                    The robot autonomously builds a self-evolving multimodal memory, generates self-instructions, and continuously improves its navigation policy without human supervision.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column container is-max-desktop">
+                    <h2 class="title is-3">Summary Video</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XOek5BsLf0Q"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p style="margin-top: 10px; color: #666;">
+                        If video does not load, click <a href="https://cloud.tsinghua.edu.cn/f/80e0a0eb9cd047569699/?dl=1">HERE</a> to download.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                        <center>
+                            <img src="img/pipeline.jpg" alt="Pipeline" width="100%">
+                        </center>
+                        <p>
+                            <b>AllDayNav implements a closed-loop learning system</b> driven by a continuously evolving multimodal memory database.
+                            The system architecture comprises four integrated modules that collectively realize the memory--policy co-evolution cycle:
+                            (A) The VLA Navigation Backbone processes dual-encoded observations (SigLIP + DINOv2) and compressed history to predict waypoints.
+                            (B) The Self-Evolving Memory Database continuously accumulates keyframes with semantic descriptions generated by VLM.
+                            (C) The Self-Instruction & Retrieval Module generates diverse tasks from memory and retrieves visual goals.
+                            (D) The CQL-based RL Module refines the policy using a conservative objective to ensure stability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Self-Evolving Memory Database</h2>
+                    <div class="content has-text-justified">
+                        <center>
+                            <img src="img/memory.jpg" alt="Memory" width="100%">
+                        </center>
+                        <p>
+                            The memory database $\mathcal{M}$ serves as the agent's persistent internal representation of the environment.
+                            Each entry is a quadruple $(o_i, d_i, \tau_i, \mathbf{e}_i)$ containing a visual keyframe, semantic description, timestamp, and visual embedding.
+                            The memory continuously evolves as the agent explores, incorporating new observations while maintaining diversity and preventing redundancy.
+                            Given a natural language instruction, the VLM retrieves the most relevant visual goal from the memory database.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiments Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Simulation Results</h2>
+                    <div class="content has-text-justified">
+                        <center>
+                            <img src="img/simulator_eval.jpg" alt="Simulation Results" width="90%">
+                        </center>
+                        <p>
+                            Lifelong learning performance in simulation across five HM3D/MP3D test scenes.
+                            <b>AllDayNav exhibits a steady upward trajectory and converges to near-perfect success rates (approaching 100%)</b>,
+                            significantly outperforming baseline methods including ReMEmbR, ConRFT, SERL, and OSG Navigator.
+                            The steady increase in SPL and decrease in episode length indicate that AllDayNav learns to navigate more efficiently over time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Real-World Deployment</h2>
+                    <div class="content has-text-justified">
+                        <center>
+                            <img src="img/real_robot.jpg" alt="Real Robot Setup" width="70%">
+                        </center>
+                        <p>
+                            We deploy AllDayNav in real-world environments using a <b>Unitree Go2 quadruped robot</b>.
+                            The robot is equipped with a forward-facing RGB camera (120° FOV), LiDAR-L1 for obstacle avoidance, and a 5G communication module.
+                            Sensor streams are transmitted to a remote H100 server that hosts the memory and policy learning stack.
+                        </p>
+                        <br>
+                        <center>
+                            <img src="img/realworld_eval.jpg" alt="Real-World Results" width="90%">
+                        </center>
+                        <p>
+                            Real-world lifelong learning performance across three environments (laboratory, living room, and home).
+                            AllDayNav achieves consistently high success rates while continuously improving through autonomous exploration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Qualitative Results</h2>
+                    <div class="content has-text-justified">
+                        <center>
+                            <img src="img/visualization.jpg" alt="Visualization" width="100%">
+                        </center>
+                        <p>
+                            Visualization of navigation episodes showing both a simulation trajectory (left) and a real-world deployment case (right).
+                            The robot demonstrates the ability to autonomously explore, build memory, understand natural language instructions, and execute successful navigation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BibTeX Section -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@article{yin2025alldaynav,
+  title={AllDayNav: Lifelong Navigation via Real-World Reinforcement Learning},
+  author={Yin, Hang and Zhang, Jiazhao and Liang, Yinan and Liu, Jiahang and Li, Minghan and Wang, He},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2025}
+}</code></pre>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <a href="https://github.com/bagh2178" class="external-link">Hang Yin</a> &copy; 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize carousel for results
+        $(document).ready(function(){
+            $('.results-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+</body>
+</html>
