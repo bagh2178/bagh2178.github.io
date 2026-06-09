@@ -392,3 +392,42 @@ figure.image img {
   /* 50%   { background-position: 50% 100%; } */
   100% { background-position: 0% 100%; }
 }
+
+/* Sub-results carousel arrows */
+.sub-results-carousel .slick-prev,
+.sub-results-carousel .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.sub-results-carousel .slick-prev {
+  left: -50px;
+}
+
+.sub-results-carousel .slick-next {
+  right: -50px;
+}
+
+.sub-results-carousel .slick-prev:before,
+.sub-results-carousel .slick-next:before {
+  font-size: 40px;
+  color: #333;
+  opacity: 0.75;
+}
+
+.sub-results-carousel .slick-prev:hover:before,
+.sub-results-carousel .slick-next:hover:before {
+  opacity: 1;
+  color: #000;
+}
+
+/* Sub-results carousel dots */
+.sub-results-carousel .slick-dots {
+  bottom: -40px;
+}
+
+.sub-results-carousel .slick-dots li button:before {
+  font-size: 8px;
+  color: #333;
+}
